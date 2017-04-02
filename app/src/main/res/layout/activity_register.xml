@@ -5,11 +5,23 @@
     android:layout_height="match_parent"
     tools:context="bangtanrut.songklod.bookgazebo.RegisterActivity">
 
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
+            android:background="@color/bg_black"
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -26,10 +38,12 @@
                     android:src="@mipmap/ic_user2" />
 
                 <EditText
+                    android:id="@+id/edtName"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/colorPrimary" />
 
             </LinearLayout>
@@ -45,10 +59,12 @@
                     android:src="@mipmap/ic_user2" />
 
                 <EditText
+                    android:inputType="text"
+                    android:id="@+id/edtSurname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/surname"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/colorPrimary" />
 
             </LinearLayout>
@@ -64,10 +80,12 @@
                     android:src="@mipmap/ic_user2" />
 
                 <EditText
+                    android:inputType="number"
+                    android:id="@+id/edtCard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="@string/id_card"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/colorPrimary" />
 
             </LinearLayout>
@@ -83,10 +101,13 @@
                     android:src="@mipmap/ic_user2" />
 
                 <EditText
+                    android:id="@+id/edtAddress"
+                    android:gravity="top"
+                    android:lines="3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="@string/address"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/colorPrimary" />
 
             </LinearLayout>
@@ -102,10 +123,12 @@
                     android:src="@mipmap/ic_user2" />
 
                 <EditText
+                    android:id="@+id/edtPhone"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="@string/phone"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/colorPrimary" />
 
             </LinearLayout>
@@ -121,10 +144,12 @@
                     android:src="@mipmap/ic_user2" />
 
                 <EditText
+                    android:id="@+id/edtUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="@string/user"
+                    android:inputType="text"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/colorPrimary" />
 
             </LinearLayout>
@@ -140,13 +165,25 @@
                     android:src="@mipmap/ic_user2" />
 
                 <EditText
+                    android:inputType="text"
+                    android:id="@+id/edtPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:hint="@string/password"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/colorPrimary" />
 
+
+
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/save"
+                android:background="@drawable/my_button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 

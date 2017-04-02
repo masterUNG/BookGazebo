@@ -6,4 +6,13 @@
     <string name="new_register">New Register</string>
     <string name="name">Name</string>
     <string name="surname">Surname</string>
+    <string name="id_card">id-Card</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="save">save</string>
+    <string name="title_HaveSpace">Have Space</string>
+    <string name="message_HaveSpace">Please Fill All Every Blank</string>
+    <string name="title_FalseIDcard">ID=Card False</string>
+    <string name="messge_FalseIDcard">Plase Fill ID-Card 13 Digi</string>
+
 </resources>
