@@ -6,7 +6,7 @@ package bangtanrut.songklod.bookgazebo;
 
 public class MyConstant {
 
-    private String urlPostUser="http://coderobot.webstarterz.com/coderobot.webstarterz.com/bauy/app/postUser.php"
+    private String urlPostUser = "http://coderobot.webstarterz.com/coderobot.webstarterz.com/bauy/app/postUser.php";
 
     public String getUrlPostUser() {
         return urlPostUser;

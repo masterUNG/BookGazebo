@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText nameEditTex, surnameEditTex, idCradEditTex, addressEditTex, phoneEditTex, userEditTex, passwordEditTex;
@@ -94,6 +95,27 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         Log.d(tag, "Phone ==>" + phoneString);
         Log.d(tag, "User ==>" + userString);
         Log.d(tag, "Password ==>" + passwordString);
+
+        try {
+
+            MyConstant myConstant = new MyConstant();
+
+            PostUser postUser = new PostUser(RegisterActivity.this);
+            postUser.execute(nameString,surnameString,idCardString
+            ,addressString,phoneString,userString,passwordString,myConstant.getUrlPostUser());
+
+            boolean b = Boolean.parseBoolean(postUser.get());
+            Log.d(tag, "Result ==>" + b);
+            if (b) {
+                finish();
+            } else {
+                Toast.makeText(RegisterActivity.this,"Cannot Upload to Server",
+                        Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (Exception e) {
+            Log.d(tag, "e upload ==>" + e.toString());
+        }
 
     }//upload
 }   // Main Class
